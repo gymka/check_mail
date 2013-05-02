@@ -4,7 +4,7 @@ import base64
 import os
 import time
 import email
-laiskai =""
+laiskai = ""
 def check_mail():
 	global laiskai
 	f = open('pass.txt','r')
@@ -66,6 +66,7 @@ def check_mail():
 		os.system("mplayer /home/gymka/.config/email/DingDongNewEmail.wav >/dev/null 2>&1")
 		cmd="export DISPLAY=:0; notify-send -i \"thunderbird\" \"Paštas:\n"+laiskai+"\""
 		os.system(cmd)
+		laiskai = ""
 		
 def parse_mail(n,b):
 		try:
