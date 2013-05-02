@@ -7,7 +7,7 @@ import email
 laiskai = ""
 def check_mail():
 	global laiskai
-	f = open('pass.txt','r')
+	f = open('/home/gymka/Dev/source/check_mail/pass.txt','r')
 	lines = f.readlines()
 	pass1 = bytes(lines[0],'utf-8')
 	pass2 = bytes(lines[1],'utf-8')
@@ -63,8 +63,8 @@ def check_mail():
 	laisku=box1+box2+box3
 
 	if laisku>0:
-		os.system("mplayer /home/gymka/.config/email/DingDongNewEmail.wav >/dev/null 2>&1")
-		cmd="export DISPLAY=:0; notify-send -i \"thunderbird\" \"Paštas:\n"+laiskai+"\""
+		os.system("mplayer /home/gymka/Dev/source/check_mail/DingDongNewEmail.wav >/dev/null 2>&1")
+		cmd="export DISPLAY=:0; notify-send -i \"/home/gymka/Dev/source/check_mail/mail.png\" \"Paštas:\n"+laiskai+"\""
 		os.system(cmd)
 		laiskai = ""
 		
