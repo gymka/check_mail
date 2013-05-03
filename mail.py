@@ -64,7 +64,7 @@ def check_mail():
 
 	if laisku>0:
 		os.system("mplayer /home/gymka/Dev/source/check_mail/DingDongNewEmail.wav >/dev/null 2>&1")
-		cmd="export DISPLAY=:0; notify-send -i \"/home/gymka/Dev/source/check_mail/mail.png\" \"Paštas:\n"+laiskai+"\""
+		cmd="export DISPLAY=:0; notify-send -t 240000 -i \"/home/gymka/Dev/source/check_mail/mail.png\" \"Paštas:\n"+laiskai+"\""
 		os.system(cmd)
 		laiskai = ""
 		
